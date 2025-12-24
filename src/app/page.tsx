@@ -350,37 +350,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section
-        id="gallery"
-        ref={el => { sectionsRef.current[4] = el; }}
-        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
-              Our Gallery
-            </span>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Glimpses of our blood donation camps and community service
-            </p>
-          </div>
-          <div className="flex items-center justify-center min-h-[400px]">
-            <Card className="p-20 shadow-2xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Coming Soon</h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300">We're preparing an amazing gallery for you. Stay tuned!</p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section
         id="contact"
