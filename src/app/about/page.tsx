@@ -1,3 +1,4 @@
+"use client";
 // About Us Page
 import { Card } from "../../components/ui/card";
 import { motion } from "framer-motion";

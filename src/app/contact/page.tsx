@@ -1,3 +1,4 @@
+"use client";
 // Contact Us Page
 import { Card } from "../../components/ui/card";
 import { Phone, Mail, MapPin } from "lucide-react";
