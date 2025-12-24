@@ -9,13 +9,17 @@ export default function ContactPage() {
       <Card className="p-4 sm:p-10 shadow-xl border-2 border-red-50 w-full">
         <h2 className="text-2xl sm:text-4xl font-bold text-red-700 mb-6 sm:mb-8 text-center">Contact Us</h2>
         <div className="flex flex-col gap-4 sm:gap-6 text-base sm:text-xl">
-          <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            <Phone className="text-red-600 w-5 h-5 sm:w-6 sm:h-6" />
-            <a href="tel:8789370331" className="hover:underline text-gray-700 dark:text-gray-200 font-medium">8789370331</a>
-          </div>
-          <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-            <FaWhatsapp className="text-green-500 w-5 h-5 sm:w-6 sm:h-6" />
-            <a href="https://wa.me/8789370331" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-700 dark:text-gray-200 font-medium">WhatsApp Chat</a>
+          <div className="flex items-center justify-between gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors w-full">
+            {/* Phone icon and number on the left */}
+            <div className="flex items-center gap-2">
+              <Phone className="text-red-600 w-5 h-5 sm:w-6 sm:h-6" />
+              <a href="tel:8789370331" className="hover:underline text-gray-700 dark:text-gray-200 font-medium">8789370331</a>
+            </div>
+            {/* WhatsApp icon and link on the right */}
+            <div className="flex items-center gap-2">
+              <a href="https://wa.me/8789370331" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-700 dark:text-gray-200 font-medium">WhatsApp Chat</a>
+              <FaWhatsapp className="text-green-500 w-5 h-5 sm:w-6 sm:h-6" />
+            </div>
           </div>
           <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
             <Mail className="text-blue-600 w-5 h-5 sm:w-6 sm:h-6" />
