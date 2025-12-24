@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "SAMASTIPUR BLOOD CENTRE - Donate Blood, Save Lives",
   description:
     "Official website of Samastipur Blood Centre. 24x7 blood donation services, blood group testing, component separation, and emergency blood supply. Contact us for blood donation camps and more.",
+  keywords: "blood donation, blood bank, Samastipur, Bihar, emergency blood, blood group testing, component separation",
+  authors: [{ name: "Samastipur Blood Centre" }],
+  openGraph: {
+    title: "SAMASTIPUR BLOOD CENTRE - Donate Blood, Save Lives",
+    description: "24x7 blood donation services in Samastipur, Bihar. Save lives by donating blood.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -15,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full w-full">
-      <body className="antialiased bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col w-full h-full">
+    <html lang="en">
+      <body className="antialiased bg-gray-50 dark:bg-gray-900 min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 pt-20 pb-0 px-0 w-full flex flex-col">
+        <main className="flex-1 pt-20">
           {children}
         </main>
         <FloatingAction />

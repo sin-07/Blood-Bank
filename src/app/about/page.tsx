@@ -1,9 +1,11 @@
 // About Us Page
 import { Card } from "../../components/ui/card";
+import { motion } from "framer-motion";
+import { fadeInUpSimple } from "../../constants/animations";
 
 export default function AboutPage() {
   return (
-    <section className="max-w-4xl mx-auto mt-24 p-3 sm:p-6 w-full">
+    <motion.section {...fadeInUpSimple} className="max-w-4xl mx-auto mt-24 p-3 sm:p-6 w-full">
       <Card className="p-4 sm:p-10 shadow-xl border-2 border-red-50 w-full">
         <h2 className="text-2xl sm:text-4xl font-bold text-red-700 mb-4 sm:mb-6">About Us</h2>
         <div className="space-y-3 sm:space-y-4">
@@ -18,6 +20,6 @@ export default function AboutPage() {
           </p>
         </div>
       </Card>
-    </section>
+    </motion.section>
   );
 }

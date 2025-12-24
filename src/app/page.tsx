@@ -1,76 +1,16 @@
 "use client";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Phone, Mail, MapPin, Droplet, Users, Clock, Award, Heart, Shield, Smartphone, Database, UserPlus } from "lucide-react";
+import { Phone, Mail, MapPin, Droplet, Users, Clock, Award, Heart } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
-
-const services = [
-  {
-    title: "Blood Donation",
-    desc: "We organize regular blood donation camps and accept voluntary donations at our centre.",
-    icon: Droplet,
-  },
-  {
-    title: "Blood Group Testing",
-    desc: "Get your blood group tested quickly and accurately by our trained professionals.",
-    icon: Shield,
-  },
-  {
-    title: "Component Separation",
-    desc: "We provide blood components (RBC, Platelets, Plasma) as per medical requirements.",
-    icon: Database,
-  },
-  {
-    title: "24x7 Emergency Service",
-    desc: "Our team is available round the clock to provide blood in emergencies.",
-    icon: Clock,
-  },
-  {
-    title: "Blood Storage & Banking",
-    desc: "State-of-the-art storage facilities to maintain blood quality and safety standards.",
-    icon: Award,
-  },
-  {
-    title: "Blood Screening",
-    desc: "Comprehensive screening for infections and diseases to ensure safe transfusions.",
-    icon: Heart,
-  },
-  {
-    title: "Mobile Blood Collection",
-    desc: "We bring our mobile units to your location for convenient blood donation drives.",
-    icon: Smartphone,
-  },
-  {
-    title: "Donor Registration",
-    desc: "Easy registration process for regular donors with digital records and reminders.",
-    icon: UserPlus,
-  },
-];
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { services } from "../constants/services";
+import { fadeInUp } from "../constants/animations";
 
 export default function HomePage() {
-  const sectionsRef = useRef<(HTMLElement | null)[]>([]);
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [formStatus, setFormStatus] = useState("");
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in-up");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => observer.disconnect();
-  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -83,10 +23,10 @@ export default function HomePage() {
     <main>
       <div className="scroll-smooth w-full">
         {/* Hero Section with Gradient Background */}
-        <section
+      <motion.section
         id="home"
-        ref={el => { sectionsRef.current[0] = el; }}
-        className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-red-50 via-white to-red-100 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"></div>
         <div className="absolute inset-0 opacity-10">
@@ -142,13 +82,13 @@ export default function HomePage() {
             <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">Service Available</span>
           </Card>
         </div>
-      </section>
+      </motion.section>
 
       {/* About Section with Enhanced Design */}
-      <section
+      <motion.section
         id="about"
-        ref={el => { sectionsRef.current[1] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
@@ -187,13 +127,13 @@ export default function HomePage() {
             </div>
           </Card>
         </div>
-      </section>
+      </motion.section>
 
       {/* Services Section with Icons */}
-      <section
+      <motion.section
         id="services"
-        ref={el => { sectionsRef.current[2] = el; }}
-        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
@@ -225,13 +165,13 @@ export default function HomePage() {
             })}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Gallery Section */}
-      <section
+      <motion.section
         id="gallery"
-        ref={el => { sectionsRef.current[3] = el; }}
-        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
@@ -256,13 +196,13 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Query/Contact Form Section */}
-      <section
+      <motion.section
         id="query"
-        ref={el => { sectionsRef.current[4] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
@@ -348,13 +288,13 @@ export default function HomePage() {
             </form>
           </Card>
         </div>
-      </section>
+      </motion.section>
 
       {/* Contact Section */}
-      <section
+      <motion.section
         id="contact"
-        ref={el => { sectionsRef.current[5] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+        {...fadeInUp}
+        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
@@ -430,7 +370,7 @@ export default function HomePage() {
             </Card>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Footer */}
       <footer className="relative bg-linear-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-4 sm:px-8 lg:px-24 xl:px-40 w-full shadow-inner overflow-hidden mt-0">
@@ -488,3 +428,4 @@ export default function HomePage() {
     </main>
   );
 }
+
