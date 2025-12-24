@@ -402,18 +402,18 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="relative bg-linear-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-0 w-full shadow-inner overflow-hidden mt-0">
-        <div className="w-full max-w-7xl mx-auto px-0 md:px-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-0">
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-8">
           {/* Brand and tagline */}
-          <div className="mb-8 md:mb-0 flex-1 min-w-[220px]">
+          <div className="mb-8 md:mb-0 flex-1 min-w-[220px] text-center md:text-left">
             <p className="text-2xl font-extrabold tracking-wide mb-2 bg-clip-text text-transparent bg-linear-to-r from-white to-red-200">SAMASTIPUR BLOOD CENTRE</p>
             <p className="text-red-100 mb-4">Saving Lives, One Drop at a Time</p>
-            <div className="flex gap-4 mt-2">
+            <div className="flex gap-4 mt-2 justify-center md:justify-start">
               <a href="https://wa.me/8789370331" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors" aria-label="WhatsApp"><svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.18-1.62A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.68-.5-5.26-1.44l-.38-.22-3.67.96.98-3.58-.25-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.47-7.14c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.36.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/></svg></a>
               <a href="mailto:samastipurbloodcentre@gmail.com" className="hover:text-blue-300 transition-colors" aria-label="Email"><svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"/></svg></a>
             </div>
           </div>
           {/* Quick Links */}
-          <div className="mb-8 md:mb-0 flex-1 min-w-[180px]">
+          <div className="mb-8 md:mb-0 flex-1 min-w-[180px] text-center md:text-left">
             <h3 className="text-lg font-semibold mb-3 text-red-100">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#home" className="hover:text-red-200 transition-colors">Home</a></li>
@@ -424,14 +424,31 @@ export default function HomePage() {
             </ul>
           </div>
           {/* Contact Info */}
-          <div className="flex-1 min-w-[220px]">
+          <div className="flex-1 min-w-[220px] text-center md:text-left">
             <h3 className="text-lg font-semibold mb-3 text-red-100">Contact</h3>
-            <p className="mb-2 flex items-center gap-2"><svg className="w-5 h-5 text-red-200" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg> <a href="tel:8789370331" className="hover:text-red-200 transition-colors">8789370331</a></p>
-            <p className="mb-2 flex items-center gap-2"><svg className="w-5 h-5 text-red-200" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.31.42 2.52 1.13 3.5l8.37-8.37C14.52 2.42 13.31 2 12 2zm6.87 4.5l-8.37 8.37C9.48 21.58 10.69 22 12 22c3.31 0 6-2.69 6-6 0-1.31-.42-2.52-1.13-3.5z"/></svg> Samastipur, Bihar, India</p>
-            <p className="mb-2 flex items-center gap-2"><svg className="w-5 h-5 text-red-200" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"/></svg> <a href="mailto:samastipurbloodcentre@gmail.com" className="hover:text-red-200 transition-colors">samastipurbloodcentre@gmail.com</a></p>
+            <p className="mb-2 flex items-center gap-2 justify-center md:justify-start"><svg className="w-5 h-5 text-red-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg> <a href="tel:8789370331" className="hover:text-red-200 transition-colors">8789370331</a></p>
+            <p className="mb-2 flex items-start gap-2 justify-center md:justify-start"><svg className="w-5 h-5 text-red-200 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6 0 1.31.42 2.52 1.13 3.5l8.37-8.37C14.52 2.42 13.31 2 12 2zm6.87 4.5l-8.37 8.37C9.48 21.58 10.69 22 12 22c3.31 0 6-2.69 6-6 0-1.31-.42-2.52-1.13-3.5z"/></svg> <span className="text-left max-w-xs">Samastipur Blood Centre, Mata Chandrakala Hospital, Mohanpur Road, Samastipur (Near UN Place), Bihar - 848101</span></p>
+            <p className="mb-2 flex items-center gap-2 justify-center md:justify-start"><svg className="w-5 h-5 text-red-200 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zm0 12H4V8.99l8 6.99 8-6.99V18z"/></svg> <a href="mailto:samastipurbloodcentre@gmail.com" className="hover:text-red-200 transition-colors break-all">samastipurbloodcentre@gmail.com</a></p>
           </div>
         </div>
-        <div className="w-full max-w-7xl mx-auto px-0 md:px-12 mt-10 border-t border-red-800 pt-6 text-center text-sm text-red-200">
+        
+        {/* Google Map */}
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10">
+          <h3 className="text-xl font-semibold mb-4 text-center">Find Us Here</h3>
+          <div className="w-full h-64 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.2820891817595!2d85.77826631501487!3d25.865208683608937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed43e1f6b3c5d9%3A0x1e3f9c8b5e7d4c3a!2sMohanpur%20Road%2C%20Samastipur%2C%20Bihar%20848101!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Samastipur Blood Centre Location"
+            ></iframe>
+          </div>
+        </div>
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10 border-t border-red-800 pt-6 text-center text-sm text-red-200">
           © 2025 Samastipur Blood Centre. All rights reserved.
         </div>
       </footer>
