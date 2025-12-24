@@ -8,7 +8,7 @@ const whatsappUrl = `https://wa.me/${whatsappNumber}`;
 
 export function FloatingAction() {
   return (
-    <div className="fixed bottom-4 left-0 right-0 z-50 flex flex-row justify-between items-center px-4 sm:bottom-8 sm:px-8 pointer-events-none">
+    <div className="fixed bottom-4 left-0 right-0 z-50 flex flex-row justify-between items-center px-4 sm:bottom-8 sm:px-8 lg:px-24 xl:px-40 pointer-events-none">
       <a
         href={`tel:${phoneNumber}`}
         className="relative bg-linear-to-br from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white rounded-full shadow-2xl p-4 sm:p-5 flex items-center transition-all duration-300 hover:scale-110 group pointer-events-auto"

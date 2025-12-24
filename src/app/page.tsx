@@ -80,9 +80,10 @@ export default function HomePage() {
   };
 
   return (
-    <div className="scroll-smooth w-full">
-      {/* Hero Section with Gradient Background */}
-      <section
+    <main>
+      <div className="scroll-smooth w-full">
+        {/* Hero Section with Gradient Background */}
+        <section
         id="home"
         ref={el => { sectionsRef.current[0] = el; }}
         className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full opacity-0 overflow-hidden"
@@ -147,7 +148,7 @@ export default function HomePage() {
       <section
         id="about"
         ref={el => { sectionsRef.current[1] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-20 px-0 w-full opacity-0 overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
@@ -192,7 +193,7 @@ export default function HomePage() {
       <section
         id="services"
         ref={el => { sectionsRef.current[2] = el; }}
-        className="relative min-h-screen py-24 px-0 w-full opacity-0 overflow-hidden"
+        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
@@ -211,7 +212,7 @@ export default function HomePage() {
               return (
                 <Card
                   key={service.title}
-                  className="p-8 hover:shadow-2xl transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group bg-white/90 dark:bg-gray-800/90 backdrop-blur"
+                  className="group p-8 shadow-xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-14 h-14 bg-linear-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
@@ -226,11 +227,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section
+        id="gallery"
+        ref={el => { sectionsRef.current[3] = el; }}
+        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
+        <div className="relative z-10 w-full">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+              Our Gallery
+            </span>
+            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Glimpses of our blood donation camps and community service
+            </p>
+          </div>
+          <div className="flex items-center justify-center min-h-[400px]">
+            <Card className="p-20 shadow-2xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+              <div className="text-center">
+                <div className="w-24 h-24 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Coming Soon</h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300">We're preparing an amazing gallery for you. Stay tuned!</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Query/Contact Form Section */}
       <section
         id="query"
-        ref={el => { sectionsRef.current[3] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-24 px-0 w-full opacity-0 overflow-hidden"
+        ref={el => { sectionsRef.current[4] = el; }}
+        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
@@ -318,11 +350,42 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section
+        id="gallery"
+        ref={el => { sectionsRef.current[4] = el; }}
+        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
+      >
+        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
+        <div className="relative z-10 w-full">
+          <div className="text-center mb-16">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+              Our Gallery
+            </span>
+            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Glimpses of our blood donation camps and community service
+            </p>
+          </div>
+          <div className="flex items-center justify-center min-h-[400px]">
+            <Card className="p-20 shadow-2xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+              <div className="text-center">
+                <div className="w-24 h-24 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Heart className="w-12 h-12 text-white" />
+                </div>
+                <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Coming Soon</h3>
+                <p className="text-lg text-gray-600 dark:text-gray-300">We're preparing an amazing gallery for you. Stay tuned!</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section
         id="contact"
-        ref={el => { sectionsRef.current[4] = el; }}
-        className="relative min-h-screen flex items-center justify-center py-24 px-0 w-full opacity-0 overflow-hidden"
+        ref={el => { sectionsRef.current[5] = el; }}
+        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
@@ -401,7 +464,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="relative bg-linear-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-0 w-full shadow-inner overflow-hidden mt-0">
+      <footer className="relative bg-linear-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-4 sm:px-8 lg:px-24 xl:px-40 w-full shadow-inner overflow-hidden mt-0">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-8">
           {/* Brand and tagline */}
           <div className="mb-8 md:mb-0 flex-1 min-w-[220px] text-center md:text-left">
@@ -449,9 +512,10 @@ export default function HomePage() {
           </div>
         </div>
         <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10 border-t border-red-800 pt-6 text-center text-sm text-red-200">
-          © 2025 Samastipur Blood Centre. All rights reserved.
+          © 2025 Samastipur Blood Centre. All rights reserved. Powered by A2R Software Solution(9097275465).
         </div>
       </footer>
-    </div>
+      </div>
+    </main>
   );
 }
