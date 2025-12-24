@@ -84,7 +84,7 @@ export default function HomePage() {
       {/* Hero Section with Gradient Background */}
       <section
         id="home"
-        ref={el => (sectionsRef.current[0] = el)}
+        ref={el => { sectionsRef.current[0] = el; }}
         className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-red-50 via-white to-red-100 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"></div>
@@ -146,7 +146,7 @@ export default function HomePage() {
       {/* About Section with Enhanced Design */}
       <section
         id="about"
-        ref={el => (sectionsRef.current[1] = el)}
+        ref={el => { sectionsRef.current[1] = el; }}
         className="relative min-h-screen flex items-center justify-center py-20 px-0 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
@@ -191,7 +191,7 @@ export default function HomePage() {
       {/* Services Section with Icons */}
       <section
         id="services"
-        ref={el => (sectionsRef.current[2] = el)}
+        ref={el => { sectionsRef.current[2] = el; }}
         className="relative min-h-screen py-24 px-0 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
@@ -229,7 +229,7 @@ export default function HomePage() {
       {/* Query/Contact Form Section */}
       <section
         id="query"
-        ref={el => (sectionsRef.current[3] = el)}
+        ref={el => { sectionsRef.current[3] = el; }}
         className="relative min-h-screen flex items-center justify-center py-24 px-0 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
@@ -321,7 +321,7 @@ export default function HomePage() {
       {/* Contact Section */}
       <section
         id="contact"
-        ref={el => (sectionsRef.current[4] = el)}
+        ref={el => { sectionsRef.current[4] = el; }}
         className="relative min-h-screen flex items-center justify-center py-24 px-0 w-full opacity-0 overflow-hidden"
       >
         <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
