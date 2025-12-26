@@ -3,13 +3,14 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { Menu, X, Home, Info, Briefcase, HelpCircle, Phone } from "lucide-react";
+import { Menu, X, Home, Info, Briefcase, HelpCircle, Phone, Images } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { name: "Home", href: "#home", icon: Home },
   { name: "About Us", href: "#about", icon: Info },
   { name: "Services", href: "#services", icon: Briefcase },
+  { name: "Gallery", href: "/gallery", icon: Images },
   { name: "Query", href: "#query", icon: HelpCircle },
   { name: "Contact", href: "#contact", icon: Phone },
 ] as const;
@@ -75,17 +76,23 @@ export function Navbar() {
     }
   }, [menuOpen]);
 
-  const scrollToSection = useCallback((href: string) => {
+  const handleNavigation = useCallback((href: string) => {
     // Close menu first to unfreeze the body
     setMenuOpen(false);
     
-    // Wait for body to unfreeze, then scroll
-    setTimeout(() => {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }, 100);
+    // Check if it's a hash link or a page route
+    if (href.startsWith('#')) {
+      // Wait for body to unfreeze, then scroll
+      setTimeout(() => {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    } else {
+      // Navigate to page
+      window.location.href = href;
+    }
   }, []);
 
   const toggleMenu = useCallback(() => setMenuOpen((v) => !v), []);
@@ -95,7 +102,7 @@ export function Navbar() {
     <>
       <nav className="w-full h-16 flex items-center justify-between px-3 sm:px-6 md:px-12 bg-white/95 dark:bg-gray-900/95 shadow-lg fixed top-0 left-0 z-50 backdrop-blur-md border-b border-red-100 dark:border-red-900/20">
         <button
-          onClick={() => scrollToSection("#home")}
+          onClick={() => handleNavigation("#home")}
           className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity cursor-pointer"
         >
           <Image
@@ -115,7 +122,7 @@ export function Navbar() {
             <Button
               key={link.name}
               variant="ghost"
-              onClick={() => scrollToSection(link.href)}
+              onClick={() => handleNavigation(link.href)}
               className="text-sm md:text-base font-medium hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all duration-300 relative group"
             >
               {link.name}
@@ -204,7 +211,7 @@ export function Navbar() {
                       variants={navItemVariants}
                       initial="closed"
                       animate="open"
-                      onClick={() => scrollToSection(link.href)}
+                      onClick={() => handleNavigation(link.href)}
                       className="flex items-center gap-4 px-4 py-4 rounded-xl text-left font-medium text-gray-700 dark:text-gray-200 hover:bg-linear-to-r hover:from-red-100 hover:to-red-50 dark:hover:from-red-900/30 dark:hover:to-red-900/10 transition-all duration-300 group"
                       aria-label={`Navigate to ${link.name}`}
                     >

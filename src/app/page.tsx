@@ -1,16 +1,33 @@
 "use client";
 import { Card } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Phone, Mail, MapPin, Droplet, Users, Clock, Award, Heart } from "lucide-react";
+import { Phone, Mail, MapPin, Droplet, Users, Clock, Award, Heart, X, Images as ImagesIcon } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { services } from "../constants/services";
 import { fadeInUp } from "../constants/animations";
+import ImageGallery from "../components/ImageGallery";
+import Image from "next/image";
 
 export default function HomePage() {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
   const [formStatus, setFormStatus] = useState("");
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+
+  const galleryImages = [
+    '/IMG-20251226-WA0022.jpg',
+    '/IMG-20251226-WA0023.jpg',
+    '/IMG-20251226-WA0024.jpg',
+    '/IMG-20251226-WA0025.jpg',
+    '/IMG-20251226-WA0026.jpg',
+    '/IMG-20251226-WA0027.jpg',
+    '/IMG-20251226-WA0028.jpg',
+    '/IMG-20251226-WA0029.jpg',
+    '/IMG-20251226-WA0030.jpg',
+    '/IMG-20251226-WA0031.jpg',
+    '/logo.jpeg',
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -180,21 +197,13 @@ export default function HomePage() {
               Our Gallery
             </span>
             <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
               Glimpses of our blood donation camps and community service
             </p>
           </div>
-          <div className="flex items-center justify-center min-h-[400px]">
-            <Card className="p-20 shadow-2xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Heart className="w-12 h-12 text-white" />
-                </div>
-                <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-4">Coming Soon</h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300">We're preparing an amazing gallery for you. Stay tuned!</p>
-              </div>
-            </Card>
-          </div>
+
+          {/* Carousel */}
+          <ImageGallery images={galleryImages} />
         </div>
       </motion.section>
 
@@ -424,6 +433,44 @@ export default function HomePage() {
           © 2025 Samastipur Blood Centre. All rights reserved. Powered by A2R Software Solution(9097275465).
         </div>
       </footer>
+
+      {/* Gallery Popup Modal */}
+      <AnimatePresence>
+        {isGalleryOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-lg flex items-center justify-center p-4"
+            onClick={() => setIsGalleryOpen(false)}
+          >
+            <button
+              onClick={() => setIsGalleryOpen(false)}
+              className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white p-3 rounded-full transition-all z-[110] group"
+              aria-label="Close gallery"
+            >
+              <X className="w-6 h-6 group-hover:rotate-90 transition-transform duration-300" />
+            </button>
+
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="w-full max-w-7xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                  Blood Bank <span className="text-red-500">Gallery</span>
+                </h2>
+                <p className="text-gray-300">Browse through our collection of blood donation events</p>
+              </div>
+              <ImageGallery images={galleryImages} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
       </div>
     </main>
   );
