@@ -1,5 +1,6 @@
 import ImageGallery from '@/components/ImageGallery';
 import { Metadata } from 'next';
+import { galleryImages } from '@/constants/gallery';
 
 export const metadata: Metadata = {
   title: 'Gallery | Blood Bank',
@@ -7,20 +8,6 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
-  // Automatically collect all .jpg and .jpeg images from public folder
-  const galleryImages = [
-    '/IMG-20251226-WA0022.jpg',
-    '/IMG-20251226-WA0023.jpg',
-    '/IMG-20251226-WA0024.jpg',
-    '/IMG-20251226-WA0025.jpg',
-    '/IMG-20251226-WA0026.jpg',
-    '/IMG-20251226-WA0027.jpg',
-    '/IMG-20251226-WA0028.jpg',
-    '/IMG-20251226-WA0029.jpg',
-    '/IMG-20251226-WA0030.jpg',
-    '/IMG-20251226-WA0031.jpg',
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-950 via-gray-900 to-red-950 py-16">
       <div className="container mx-auto px-4">

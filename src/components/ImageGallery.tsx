@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
 
 interface ImageGalleryProps {
-  images: string[];
+  images: readonly string[] | string[];
 }
 
 export default function ImageGallery({ images }: ImageGalleryProps) {
@@ -82,12 +82,6 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 group-hover:from-black/40" />
-                {/* Click hint */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white/20 backdrop-blur-md rounded-full p-4">
-                    <ZoomIn className="w-8 h-8 text-white" />
-                  </div>
-                </div>
               </motion.div>
             </AnimatePresence>
 
