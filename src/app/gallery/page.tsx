@@ -19,7 +19,6 @@ export default function GalleryPage() {
     '/IMG-20251226-WA0029.jpg',
     '/IMG-20251226-WA0030.jpg',
     '/IMG-20251226-WA0031.jpg',
-    '/logo.jpeg',
   ];
 
   return (

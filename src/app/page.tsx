@@ -26,7 +26,6 @@ export default function HomePage() {
     '/IMG-20251226-WA0029.jpg',
     '/IMG-20251226-WA0030.jpg',
     '/IMG-20251226-WA0031.jpg',
-    '/logo.jpeg',
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -70,28 +69,28 @@ export default function HomePage() {
           </p>
           <Button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-6 text-lg rounded-full shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105"
+            className="bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105"
           >
             Get In Touch
           </Button>
         </div>
         
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-0 mt-16">
-          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur hover:shadow-2xl transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group">
+          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group">
             <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Droplet className="w-8 h-8 text-white" />
             </div>
             <span className="text-5xl font-bold text-red-600 mb-3">1000+</span>
             <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">Units Donated</span>
           </Card>
-          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur hover:shadow-2xl transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
+          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
             <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-white" />
             </div>
             <span className="text-5xl font-bold text-red-600 mb-3">500+</span>
             <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">Happy Donors</span>
           </Card>
-          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur hover:shadow-2xl transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
+          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
             <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Clock className="w-8 h-8 text-white" />
             </div>
@@ -115,7 +114,7 @@ export default function HomePage() {
             </span>
             <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">About Us</h2>
           </div>
-          <Card className="p-12 shadow-2xl border-2 border-red-100 hover:shadow-red-500/20 transition-all duration-500 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+          <Card className="p-12 border-2 border-red-100 transition-all duration-500 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-linear-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
@@ -169,7 +168,7 @@ export default function HomePage() {
               return (
                 <Card
                   key={service.title}
-                  className="group p-8 shadow-xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
+                  className="group p-8 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-14 h-14 bg-linear-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
@@ -224,7 +223,7 @@ export default function HomePage() {
               Have questions? We're here to help. Fill out the form below.
             </p>
           </div>
-          <Card className="p-10 shadow-2xl border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+          <Card className="p-10 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
@@ -285,7 +284,7 @@ export default function HomePage() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 font-semibold"
+                className="w-full bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 font-semibold"
               >
                 Submit Query
               </Button>
