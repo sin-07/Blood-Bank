@@ -28,7 +28,7 @@ export default function HomePage() {
       <motion.section
         id="home"
         {...fadeInUp}
-        className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full overflow-hidden"
+        className="relative flex flex-col items-center justify-center min-h-screen px-4 md:px-8 lg:px-12 py-12 md:py-16 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-100 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"></div>
         <div className="absolute inset-0 opacity-10">
@@ -37,20 +37,20 @@ export default function HomePage() {
           <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-red-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: "4s" }}></div>
         </div>
         
-        <div className="relative z-10 text-center w-full">
-          <div className="inline-block mb-4 px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full">
+        <div className="relative z-10 text-center w-full max-w-6xl mx-auto">
+          <div className="inline-block mb-3 md:mb-4 px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full">
             <span className="text-red-700 dark:text-red-300 font-semibold text-sm flex items-center gap-2">
               <Droplet className="w-4 h-4" />
               Saving Lives Since 2020
             </span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-red-700 mb-6 tracking-tight animate-slide-down leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-red-700 mb-4 md:mb-6 tracking-tight animate-slide-down leading-tight px-4">
             SAMASTIPUR<br/>BLOOD CENTRE
           </h1>
-          <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-200 leading-relaxed mb-8 animate-slide-up font-light">
+          <p className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-200 leading-relaxed mb-4 md:mb-6 animate-slide-up font-light px-4">
             Donate blood, save lives. Every drop counts.
           </p>
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-6 md:mb-8 max-w-3xl mx-auto px-4">
             We are committed to providing safe and timely blood to those in need. Join us in our mission to make a difference in the community.
           </p>
           <Button
@@ -61,8 +61,8 @@ export default function HomePage() {
           </Button>
         </div>
         
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-0 mt-16">
-          <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group">
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl mx-auto mt-8 md:mt-12">
+          <Card className="p-6 md:p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group">
             <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Droplet className="w-8 h-8 text-white" />
             </div>
@@ -90,17 +90,17 @@ export default function HomePage() {
       <motion.section
         id="about"
         {...fadeInUp}
-        className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+        <div className="relative z-10 w-full max-w-5xl mx-auto">
+          <div className="text-center mb-8 md:mb-10">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-3 md:mb-4">
               Our Story
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">About Us</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-3 md:mb-4 px-4">About Us</h2>
           </div>
-          <Card className="p-12 border-2 border-red-100 transition-all duration-500 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+          <Card className="p-6 md:p-10 lg:p-12 border-2 border-red-100 transition-all duration-500 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
@@ -135,26 +135,26 @@ export default function HomePage() {
       <motion.section
         id="services"
         {...fadeInUp}
-        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
+        className="relative min-h-screen py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+        <div className="relative z-10 w-full max-w-6xl mx-auto">
+          <div className="text-center mb-10 md:mb-12">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-3 md:mb-4">
               What We Offer
             </span>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-3 md:mb-4 px-4">Our Services</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-4">
               Comprehensive blood banking services available 24/7 for your needs
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <Card
                   key={service.title}
-                  className="group p-8 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
+                  className="group p-5 md:p-6 lg:p-8 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
@@ -173,16 +173,16 @@ export default function HomePage() {
       <motion.section
         id="gallery"
         {...fadeInUp}
-        className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
+        className="relative min-h-screen py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+        <div className="relative z-10 w-full max-w-6xl mx-auto">
+          <div className="text-center mb-10 md:mb-12">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-3 md:mb-4">
               Our Gallery
             </span>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-3 md:mb-4 px-4">Blood Bank Gallery</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-6 md:mb-8 px-4">
               Glimpses of our blood donation camps and community service
             </p>
           </div>
@@ -196,21 +196,21 @@ export default function HomePage() {
       <motion.section
         id="query"
         {...fadeInUp}
-        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+        <div className="relative z-10 w-full max-w-4xl mx-auto">
+          <div className="text-center mb-8 md:mb-10">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-3 md:mb-4">
               Get In Touch
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Send Us a Query</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-3 md:mb-4 px-4">Send Us a Query</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 px-4">
               Have questions? We're here to help. Fill out the form below.
             </p>
           </div>
-          <Card className="p-10 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <Card className="p-6 md:p-8 lg:p-10 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+            <form onSubmit={handleSubmit} className="space-y-5 md:space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">
                   Full Name *
@@ -270,7 +270,7 @@ export default function HomePage() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 font-semibold"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 md:py-4 text-base md:text-lg rounded-lg transition-all duration-300 hover:scale-105 font-semibold"
               >
                 Submit Query
               </Button>
@@ -288,21 +288,21 @@ export default function HomePage() {
       <motion.section
         id="contact"
         {...fadeInUp}
-        className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
+        className="relative min-h-screen flex items-center justify-center py-12 md:py-16 lg:py-20 px-4 sm:px-8 lg:px-16 xl:px-24 w-full overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
-        <div className="relative z-10 w-full">
-          <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
+        <div className="relative z-10 w-full max-w-5xl mx-auto">
+          <div className="text-center mb-8 md:mb-10">
+            <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-3 md:mb-4">
               Reach Out
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Contact Information</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-3 md:mb-4 px-4">Contact Information</h2>
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 px-4">
               Connect with us through any of the following channels
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+            <Card className="p-6 md:p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Phone className="text-white w-7 h-7" />
@@ -367,8 +367,8 @@ export default function HomePage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="relative bg-gradient-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-4 sm:px-8 lg:px-24 xl:px-40 w-full shadow-inner overflow-hidden mt-0">
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-8">
+      <footer className="relative bg-gradient-to-r from-red-700 to-red-900 text-white pt-8 md:pt-10 pb-4 md:pb-6 px-4 sm:px-8 lg:px-16 xl:px-24 w-full shadow-inner overflow-hidden mt-0">
+        <div className="w-full max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-6 md:gap-8">
           {/* Brand and tagline */}
           <div className="mb-8 md:mb-0 flex-1 min-w-[220px] text-center md:text-left">
             <p className="text-2xl font-extrabold tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-red-200">SAMASTIPUR BLOOD CENTRE</p>
@@ -399,9 +399,9 @@ export default function HomePage() {
         </div>
         
         {/* Google Map */}
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10">
-          <h3 className="text-xl font-semibold mb-4 text-center">Find Us Here</h3>
-          <div className="w-full h-64 rounded-lg overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto mt-6 md:mt-8">
+          <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-center">Find Us Here</h3>
+          <div className="w-full h-48 md:h-64 rounded-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.2820891817595!2d85.77826631501487!3d25.865208683608937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed43e1f6b3c5d9%3A0x1e3f9c8b5e7d4c3a!2sMohanpur%20Road%2C%20Samastipur%2C%20Bihar%20848101!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
               width="100%"
@@ -414,7 +414,7 @@ export default function HomePage() {
             ></iframe>
           </div>
         </div>
-        <div className="w-full max-w-7xl mx-auto px-4 md:px-12 mt-10 border-t border-red-800 pt-6 text-center text-sm text-red-200">
+        <div className="w-full max-w-7xl mx-auto mt-6 md:mt-8 border-t border-red-800 pt-4 md:pt-6 text-center text-xs md:text-sm text-red-200">
           © 2025 Samastipur Blood Centre. All rights reserved. Powered by A2R Software Solution(9097275465).
         </div>
       </footer>
