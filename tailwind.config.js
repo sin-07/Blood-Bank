@@ -6,7 +6,12 @@ module.exports = {
     './src/pages/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ubuntu: ['var(--font-ubuntu)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-ubuntu)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

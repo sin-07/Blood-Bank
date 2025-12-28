@@ -1,6 +1,6 @@
 // Navbar.tsx
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import Image from "next/image";
 import { Button } from "./ui/button";
 import { Menu, X, Home, Info, Briefcase, HelpCircle, Phone, Images } from "lucide-react";
@@ -51,7 +51,7 @@ const footerDotVariants = {
   transition: { repeat: Infinity, duration: 1.5 },
 };
 
-export function Navbar() {
+export const Navbar = memo(function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Freeze background when sidebar is open
@@ -112,7 +112,7 @@ export function Navbar() {
             height={40}
             className="rounded-full w-8 h-8 sm:w-10 sm:h-10"
           />
-          <span className="font-bold text-sm sm:text-lg md:text-xl tracking-wide bg-linear-to-r from-red-700 to-red-600 bg-clip-text text-transparent">
+          <span className="font-bold text-sm sm:text-lg md:text-xl tracking-wide bg-gradient-to-r from-red-700 to-red-600 bg-clip-text text-transparent">
             SAMASTIPUR BLOOD CENTRE
           </span>
         </button>
@@ -126,7 +126,7 @@ export function Navbar() {
               className="text-sm md:text-base font-medium hover:text-red-700 hover:bg-red-50 dark:hover:bg-red-900/20 transition-all duration-300 relative group"
             >
               {link.name}
-              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-linear-to-r from-red-600 to-red-700 group-hover:w-4/5 transition-all duration-300"></span>
+              <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-red-600 to-red-700 group-hover:w-4/5 transition-all duration-300"></span>
             </Button>
           ))}
         </div>
@@ -166,7 +166,7 @@ export function Navbar() {
 
             {/* Sidebar */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-72 sm:w-80 bg-linear-to-b from-white via-red-50/30 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-2xl z-56 md:hidden overflow-y-auto"
+              className="fixed top-0 right-0 h-full w-72 sm:w-80 bg-gradient-to-b from-white via-red-50/30 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 shadow-2xl z-56 md:hidden overflow-y-auto"
               variants={sidebarVariants}
               initial="closed"
               animate="open"
@@ -212,10 +212,10 @@ export function Navbar() {
                       initial="closed"
                       animate="open"
                       onClick={() => handleNavigation(link.href)}
-                      className="flex items-center gap-4 px-4 py-4 rounded-xl text-left font-medium text-gray-700 dark:text-gray-200 hover:bg-linear-to-r hover:from-red-100 hover:to-red-50 dark:hover:from-red-900/30 dark:hover:to-red-900/10 transition-all duration-300 group"
+                      className="flex items-center gap-4 px-4 py-4 rounded-xl text-left font-medium text-gray-700 dark:text-gray-200 hover:bg-gradient-to-r hover:from-red-100 hover:to-red-50 dark:hover:from-red-900/30 dark:hover:to-red-900/10 transition-all duration-300 group"
                       aria-label={`Navigate to ${link.name}`}
                     >
-                      <div className="w-10 h-10 rounded-lg bg-linear-to-br from-red-100 to-red-200 dark:from-red-900/40 dark:to-red-800/40 flex items-center justify-center group-hover:from-red-500 group-hover:to-red-600 transition-all duration-300 shadow-sm">
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-red-100 to-red-200 dark:from-red-900/40 dark:to-red-800/40 flex items-center justify-center group-hover:from-red-500 group-hover:to-red-600 transition-all duration-300 shadow-sm">
                         <Icon className="w-5 h-5 text-red-600 dark:text-red-400 group-hover:text-white transition-colors duration-300" />
                       </div>
                       <span className="text-base group-hover:text-red-700 dark:group-hover:text-red-400 transition-colors duration-300">
@@ -253,4 +253,6 @@ export function Navbar() {
       </AnimatePresence>
     </>
   );
-}
+});
+
+Navbar.displayName = 'Navbar';

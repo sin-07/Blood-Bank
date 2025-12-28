@@ -30,7 +30,7 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative flex flex-col items-center justify-center min-h-screen px-0 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-red-50 via-white to-red-100 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-red-50 via-white to-red-100 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/20"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-10 w-72 h-72 bg-red-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
           <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl animate-pulse" style={{ animationDelay: "2s" }}></div>
@@ -44,7 +44,7 @@ export default function HomePage() {
               Saving Lives Since 2020
             </span>
           </div>
-          <h1 className="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-red-700 via-red-600 to-red-700 mb-6 tracking-tight animate-slide-down leading-tight">
+          <h1 className="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-700 via-red-600 to-red-700 mb-6 tracking-tight animate-slide-down leading-tight">
             SAMASTIPUR<br/>BLOOD CENTRE
           </h1>
           <p className="text-2xl md:text-3xl text-gray-700 dark:text-gray-200 leading-relaxed mb-8 animate-slide-up font-light">
@@ -55,7 +55,7 @@ export default function HomePage() {
           </p>
           <Button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105"
+            className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white px-8 py-6 text-lg rounded-full transition-all duration-300 hover:scale-105"
           >
             Get In Touch
           </Button>
@@ -63,21 +63,21 @@ export default function HomePage() {
         
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-8 w-full px-0 mt-16">
           <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group">
-            <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Droplet className="w-8 h-8 text-white" />
             </div>
             <span className="text-5xl font-bold text-red-600 mb-3">1000+</span>
             <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">Units Donated</span>
           </Card>
           <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.1s" }}>
-            <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-white" />
             </div>
             <span className="text-5xl font-bold text-red-600 mb-3">500+</span>
             <span className="text-lg text-gray-700 dark:text-gray-200 font-medium">Happy Donors</span>
           </Card>
           <Card className="p-8 flex flex-col items-center bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-all duration-500 border-2 border-red-100 hover:border-red-300 hover:scale-105 animate-fade-in group" style={{ animationDelay: "0.2s" }}>
-            <div className="w-16 h-16 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+            <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
               <Clock className="w-8 h-8 text-white" />
             </div>
             <span className="text-5xl font-bold text-red-600 mb-3">24x7</span>
@@ -92,18 +92,18 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative min-h-screen flex items-center justify-center py-20 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
               Our Story
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">About Us</h2>
+            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">About Us</h2>
           </div>
           <Card className="p-12 border-2 border-red-100 transition-all duration-500 bg-white/90 dark:bg-gray-800/90 backdrop-blur">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-linear-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
                   <Heart className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-xl text-gray-700 dark:text-gray-200 leading-relaxed">
@@ -111,7 +111,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-linear-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-xl text-gray-700 dark:text-gray-200 leading-relaxed">
@@ -119,7 +119,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-linear-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-red-700 rounded-lg flex items-center justify-center shrink-0">
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-xl text-gray-700 dark:text-gray-200 leading-relaxed font-semibold">
@@ -137,13 +137,13 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
               What We Offer
             </span>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Our Services</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Our Services</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Comprehensive blood banking services available 24/7 for your needs
             </p>
@@ -157,7 +157,7 @@ export default function HomePage() {
                   className="group p-8 border-2 border-red-100 bg-white/90 dark:bg-gray-800/90 backdrop-blur transition-all duration-300 hover:scale-105"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-14 h-14 bg-linear-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                  <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                     <Icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">{service.title}</h3>
@@ -175,13 +175,13 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative min-h-screen py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
               Our Gallery
             </span>
-            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Blood Bank Gallery</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
               Glimpses of our blood donation camps and community service
             </p>
@@ -198,13 +198,13 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-red-50 to-white dark:from-gray-900 dark:via-red-900/10 dark:to-gray-900"></div>
         <div className="relative z-10 w-full">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
               Get In Touch
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Send Us a Query</h2>
+            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Send Us a Query</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
               Have questions? We're here to help. Fill out the form below.
             </p>
@@ -270,7 +270,7 @@ export default function HomePage() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-linear-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 font-semibold"
+                className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-4 text-lg rounded-lg transition-all duration-300 hover:scale-105 font-semibold"
               >
                 Submit Query
               </Button>
@@ -290,13 +290,13 @@ export default function HomePage() {
         {...fadeInUp}
         className="relative min-h-screen flex items-center justify-center py-24 px-4 sm:px-8 lg:px-24 xl:px-40 w-full overflow-hidden"
       >
-        <div className="absolute inset-0 bg-linear-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-red-900/10"></div>
         <div className="relative z-10 w-full">
           <div className="text-center mb-12">
             <span className="inline-block px-4 py-2 bg-red-100 dark:bg-red-900/30 rounded-full text-red-700 dark:text-red-300 font-semibold text-sm mb-4">
               Reach Out
             </span>
-            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-red-700 to-red-600 mb-4">Contact Information</h2>
+            <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-700 to-red-600 mb-4">Contact Information</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
               Connect with us through any of the following channels
             </p>
@@ -304,7 +304,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-linear-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-red-500 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Phone className="text-white w-7 h-7" />
                 </div>
                 <div>
@@ -317,7 +317,7 @@ export default function HomePage() {
             </Card>
             <Card className="p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-linear-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-green-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <FaWhatsapp className="text-white w-7 h-7" />
                 </div>
                 <div>
@@ -335,7 +335,7 @@ export default function HomePage() {
             </Card>
             <Card className="p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-linear-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Mail className="text-white w-7 h-7" />
                 </div>
                 <div>
@@ -351,7 +351,7 @@ export default function HomePage() {
             </Card>
             <Card className="p-8 shadow-xl border-2 border-red-100 hover:shadow-2xl transition-all duration-500 hover:scale-105 group bg-white/90 dark:bg-gray-800/90 backdrop-blur">
               <div className="flex items-center gap-4">
-                <div className="w-14 h-14 bg-linear-to-br from-gray-500 to-gray-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-gray-500 to-gray-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <MapPin className="text-white w-7 h-7" />
                 </div>
                 <div>
@@ -367,11 +367,11 @@ export default function HomePage() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="relative bg-linear-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-4 sm:px-8 lg:px-24 xl:px-40 w-full shadow-inner overflow-hidden mt-0">
+      <footer className="relative bg-gradient-to-r from-red-700 to-red-900 text-white pt-12 pb-6 px-4 sm:px-8 lg:px-24 xl:px-40 w-full shadow-inner overflow-hidden mt-0">
         <div className="w-full max-w-7xl mx-auto px-4 md:px-12 flex flex-col md:flex-row md:justify-between md:items-start gap-10 md:gap-8">
           {/* Brand and tagline */}
           <div className="mb-8 md:mb-0 flex-1 min-w-[220px] text-center md:text-left">
-            <p className="text-2xl font-extrabold tracking-wide mb-2 bg-clip-text text-transparent bg-linear-to-r from-white to-red-200">SAMASTIPUR BLOOD CENTRE</p>
+            <p className="text-2xl font-extrabold tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-r from-white to-red-200">SAMASTIPUR BLOOD CENTRE</p>
             <p className="text-red-100 mb-4">Saving Lives, One Drop at a Time</p>
             <div className="flex gap-4 mt-2 justify-center md:justify-start">
               <a href="https://wa.me/8789370331" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors" aria-label="WhatsApp"><svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.12.55 4.19 1.6 6.01L0 24l6.18-1.62A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.21-3.48-8.52zM12 22c-1.85 0-3.68-.5-5.26-1.44l-.38-.22-3.67.96.98-3.58-.25-.37A9.94 9.94 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.47-7.14c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.5-.5-.67-.5-.17 0-.37-.02-.57-.02-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.36.71.31 1.26.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.12-.27-.2-.57-.35z"/></svg></a>
